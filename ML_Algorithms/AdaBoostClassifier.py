@@ -15,7 +15,7 @@ from sklearn.ensemble import AdaBoostClassifier, AdaBoostRegressor
 import csv
 from sklearn.linear_model import LinearRegression
 
-url = "C:/Users/abhinav.jhanwar/Desktop/Datasets/housing.csv"
+url = "housing.csv"
 
 with open(url) as csvFile:
     reader = csv.reader(csvFile)

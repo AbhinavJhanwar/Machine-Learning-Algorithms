@@ -16,7 +16,7 @@ from sklearn.preprocessing import PolynomialFeatures, LabelEncoder
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score
 
-url = "C:/Users/abhinav.jhanwar/Desktop/Datasets/iris_data.csv"
+url = "iris_data.csv"
 
 with open(url) as csvFile:
     reader = csv.reader(csvFile)

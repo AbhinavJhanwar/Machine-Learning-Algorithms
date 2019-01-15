@@ -17,7 +17,7 @@ from sklearn.preprocessing import PolynomialFeatures, LabelEncoder
 import matplotlib.pyplot as plt 
 
 
-url = "C:/Users/abhinav.jhanwar/Desktop/Datasets/Advertising.csv"
+url = "Advertising.csv"
 
 with open(url) as csvFile:
     reader = csv.reader(csvFile)

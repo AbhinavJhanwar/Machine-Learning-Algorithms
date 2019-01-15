@@ -345,7 +345,7 @@ def imputeMissingValues(X, featureType, encodeClasses):
 
 #for page1
 warnings.filterwarnings("ignore")
-names,data = getDataset("C:/Users/abhinav.jhanwar/Desktop/Datasets/housing.csv")    #names-->to be displayed on page2
+names,data = getDataset("housing.csv")    #names-->to be displayed on page2
 
 #for page2
 X,y,problemType = getTargetFeature(data, names[0:-1], names[-1])
@@ -372,4 +372,4 @@ print("Model:",model,"Score:", Score)
 '''predic = pd.DataFrame(data = {'Predicted_Values':y_pred}, index=test.index)
 data = pd.concat([test, y_pred], axis=1)
 csv_write = pd.DataFrame(data = data)
-csv_write.to_csv("C:/Users/abhinav.jhanwar/Desktop/AdvertisingPrediction.csv")'''
+csv_write.to_csv("AdvertisingPrediction.csv")'''

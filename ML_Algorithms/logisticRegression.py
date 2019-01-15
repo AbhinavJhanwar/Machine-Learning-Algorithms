@@ -13,17 +13,16 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn import metrics, preprocessing
 import csv
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import accuracy_score
 
-url = "C:/Users/abhinav.jhanwar/Desktop/Datasets/iris_data.csv"
-
-with open(url) as csvFile:
-    reader = csv.reader(csvFile)
-    names = next(reader)
+url = "iris_data.csv"
     
 data = pd.read_csv(url)
-feature_cols = names[0:-1] #names will be replaced by features directly taken from user selection
+feature_cols = data.columns.values.tolist()[0:-1] 
 X = data[feature_cols]
-y = data[names[-1]] #names replaced by target taken from user selection
+y = data[data.columns.values.tolist()[-1]] #names replaced by target taken from user selection
 #print(X.shape)
 #print(y.shape)
 
@@ -33,16 +32,19 @@ le.fit(y)
 Encoded_classes = list(le.classes_)
 y = list(map(int, le.transform(y)))
 
-validation_size = 0.10
+validation_size = 0.20
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=validation_size, random_state=4)
-print(type(X_test))
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=validation_size, random_state=4, stratify=y)
 
 model = LogisticRegression()
 model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 
 accuracy = metrics.accuracy_score(y_test, y_pred)
-print(y_test)
-print(accuracy)
+
+print(accuracy_score(y_test, y_pred))
+print(confusion_matrix(y_test, y_pred))
+print(classification_report(y_test, y_pred))
+
+
 

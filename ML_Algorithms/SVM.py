@@ -4,7 +4,7 @@ Created on Apr 17, 2017
 @author: abhinav.jhanwar
 '''
 
-#Import Library
+# Import Library
 from sklearn.svm import SVC
 import pandas as pd
 from sklearn.model_selection import train_test_split, GridSearchCV
@@ -12,8 +12,8 @@ import csv
 from sklearn.metrics import accuracy_score
 import seaborn as sns
 
-#Assumed you have, X (predictor) and Y (target) for training data set and x_test(predictor) of test_dataset
-url = "C:/Users/abhinav.jhanwar/Desktop/Datasets/iris_data.csv"
+# Assumed you have, X (predictor) and Y (target) for training data set and x_test(predictor) of test_dataset
+url = "iris_data.csv"
 
 with open(url) as csvFile:
     reader = csv.reader(csvFile)
@@ -32,11 +32,12 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=validation_s
 
 # Create SVM classification object 
 # 1. Instantiate
-# Default kernel='rbf'
+# Default kernel='rbf' : Radial Basis Function
 # We can change to others
-#kernel = ['linear', 'poly', 'rbf', 'sigmoid', 'precomputed']
+# kernel = ['linear', 'poly', 'rbf', 'sigmoid', 'precomputed']
+# linear = no kernal; when features are less and samples are more, it is like logistic regression
 model = SVC(kernel='linear', random_state=42)
-#try for all kernels and take which one gives best result.
+# try for all kernels and take which one gives best result.
 # Train the model using the training sets and check score
 model.fit(X_train, y_train)
 

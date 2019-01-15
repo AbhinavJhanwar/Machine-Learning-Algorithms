@@ -19,7 +19,7 @@ import csv
 from collections import defaultdict
 
 
-url = "C:/Users/abhinav.jhanwar/Desktop/Datasets/Advertising.csv"
+url = "Advertising.csv"
 data = pd.read_csv(url)
 #print(data.head())
 #print(data.tail())
@@ -53,6 +53,9 @@ model.fit(X_train, y_train)
 # beta1, beta2, beta3
 #print(model.coef_)     
 
+# R-Square
+print(model.score(X_test, y_test))
+
 # pair the feature names with the coefficients
 zip(feature_cols, model.coef_)
 #print(list(zip(feature_cols, model.coef_)))
@@ -68,4 +71,4 @@ predic = pd.DataFrame(data = {'Predicted_Values':y_pred}, index=X_test.index)
 data = pd.concat([X_test, y_test, predic], axis=1)
 print(data.columns.values.tolist())
 csv_write = data
-csv_write.to_csv("C:/Users/abhinav.jhanwar/Desktop/AdvertisingPrediction.csv")
+csv_write.to_csv("AdvertisingPrediction.csv")

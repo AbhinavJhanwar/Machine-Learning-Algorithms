@@ -12,7 +12,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 import csv
 
-url = "C:/Users/abhinav.jhanwar/Desktop/Datasets/iris_data.csv"
+url = "iris_data.csv"
 
 with open(url) as csvFile:
     reader = csv.reader(csvFile)
@@ -32,6 +32,8 @@ validation_size = 0.1
 
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=validation_size, random_state=42)
 
+# n_init: number of time centroid will be selected to make the clusters in each of the iterations to avoid local optima
+# this parameter is used for the initial random initialization of centroids
 model = KMeans(n_clusters=3, max_iter=1000, n_init=20)
 
 model.fit(X_train, y_train)
