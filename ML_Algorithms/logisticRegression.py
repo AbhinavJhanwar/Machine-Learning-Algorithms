@@ -17,7 +17,7 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 
-url = "iris_data.csv"
+url = "../data/iris_data.csv"
     
 data = pd.read_csv(url)
 feature_cols = data.columns.values.tolist()[0:-1] 
