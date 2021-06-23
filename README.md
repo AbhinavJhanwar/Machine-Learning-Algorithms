@@ -1,18 +1,19 @@
 # Machine-Learning-Models
-# Guide for python developers to work on machine learning models
-# examples of various classification and regression models
-# algorithms included:
-	# Ada Boost
+Guide for python developers to work on machine learning models with examples of various classification, regression and clustering models
+### Algorithms Included:
+	# Ada Boost Classifier/Regressor
 	# Multinomilal NaiveBayes
-	# Decision Tree
-	# Gradient Boosting
-	# K Means
-	# K-NN
+	# Decision Tree Classifier/Regressor
+	# Gradient Boosting Classifier/Regressor
+	# K-NN Classifier
 	# Linear Regression
 	# Logistic Regression
 	# Naive Bayes
-	# Random Forest
+	# Random Forest Classifier/Regressor
 	# Support Vector Machine
-	# XGBoost
-	# Lasso & Ridge
-	
+	# XGBoost Classifier/Regressor
+	# Lasso & Ridge Classifier/Regressor
+	# K Means Clustering
+	# Hierarchical Clustering
+	# Gaussian Mixture Models Clustering
+	# Spectal Clustering (DBSCAN)
