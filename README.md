@@ -16,4 +16,5 @@ Guide for python developers to work on machine learning models with examples of 
 	# K Means Clustering
 	# Hierarchical Clustering
 	# Gaussian Mixture Models Clustering
-	# Spectal Clustering (DBSCAN)
+	# Spectal Clustering 
+	# DBSCAN
